@@ -41,3 +41,6 @@ jobs:
     - name: Lint with flake8
       run: |
         flake8 .
+    - name: Run all Python files
+      run: |
+        for f in $(find -maxdepth 4 -name *.py); do python $f; done
