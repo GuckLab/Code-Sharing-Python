@@ -1,2 +1,7 @@
+# default packages which should always be here
+wheel
+flake8
+
+# your packages
 numpy>=1.20.3
 dclab>=0.34.5
