@@ -43,4 +43,4 @@ jobs:
         flake8 .
     - name: Run all Python files
       run: |
-        for req, file in $(find -maxdepth 4 -name requirements.txt -name *.py); do pip install -r $req; do python $f; done
+        for req, f in $(find -maxdepth 4 -name requirements.txt -name *.py); do pip install -r $req; do python $f; done
