@@ -1,0 +1,6 @@
+# default packages which should always be here
+wheel
+flake8
+
+# your packages
+pandas>=1.3.1
