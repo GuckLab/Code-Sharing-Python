@@ -1,0 +1,7 @@
+# default packages which should always be here
+wheel
+flake8
+
+# your packages
+matplotlib>=3.4.2
+dclab>=0.34.5
