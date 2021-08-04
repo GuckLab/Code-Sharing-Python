@@ -8,12 +8,41 @@ Adding scripts and tools
 ------------------------
 
 If you have a script or a tool (e.g. function) that you think may be useful
-for others, you can add it to this repository. To do this, you should follow
-the below steps. There will also be an accompanying video describing the
-process.
+for others, you can add it to this repository. We hope to soon make
+an accompanying video describing the upload process.
+
+You can add files via the website (recommended for first time) or via git.
 
 
-#. Fork this repository.
+Add files via GitHub website
+****************************
+
+#. Fork this repository. Go to your forked repository. This is your own
+   copy of the original repository. Any changes or mistakes you make on your
+   fork don't effect the original repository so go nuts!
+#. Find the "Add file" button to the left of the green "Code" button.
+   Click "Add file" and choose "Upload files".
+#. Your new script/tool should be tested with a venv as described below in
+   bullet point 7 under *Add files via git command line*. In future, we
+   will try to implement some automated testing to replace this step.
+#. Drag and drop the script/tool files and the requirements.txt file or
+   choose your files manually.
+#. Add a commit title and short description.
+#. **NB: Choose "Create a new branch..." and cick "Commit changes".
+
+#. Create a pull request on the `Code-Sharing-Python <https://github.com/GuckLab/Code-Sharing-Python/pulls>`_ repo
+    - The maintainers will discuss the code and see if anything can be improved.
+    - When the code is ready, the newbranch will be merged into the main branch
+      and now is useable by anyone.
+
+
+
+Add files via git command line
+******************************
+
+#. Fork this repository. Go to your forked repository. This is your own
+   copy of the original repository. Any changes or mistakes you make on your
+   fork don't effect the original repository so go nuts!
 #. Clone your forked repository.
 #. On the cloned repo (locally) create and checkout a new git branch
    e.g. newbranch.
