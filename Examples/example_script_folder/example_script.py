@@ -24,7 +24,7 @@ ds.config["filtering"]["area_um min"] = (amax + amin) / 2
 ds.config["filtering"]["area_um max"] = amax
 ds.apply_filter()
 
-for ii in range(20):
+for ii in range(5):
     image = ds["image"][ii]
     mask = ds["mask"][ii]
     # this is equivalent to ds["bright_avg"][ii]

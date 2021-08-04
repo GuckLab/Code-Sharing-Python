@@ -26,7 +26,9 @@ def plot_rtdc_image(rtdc_ds, image_n):
     """
     fig, ax = plt.subplots(1, 1, figsize=(9, 5))
     ax.imshow(rtdc_ds["image"][image_n])
-    plt.show()
+    plt.show(block=False)
+    plt.pause(3)
+    plt.close()
 
 
 # example use of the above function
