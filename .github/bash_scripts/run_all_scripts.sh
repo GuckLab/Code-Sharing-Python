@@ -1,17 +1,17 @@
 #!/bin/bash
 
 
-for f in $(find -name *.py -maxdepth 4); do
+for f in $(find -maxdepth 4 -name *.py); do
 
   # create a blank line for clearer debugging
   echo ""
-  echo $f
+  echo "File Location: $f"
   # create a requirements variable
   parentdir="$(dirname "$f")"
-  echo $parentdir
+  echo "Parent Directory: $parentdir"
   # create a requirements variable
   req=$parentdir"/requirements.txt"
-  echo $req
+  echo "Requirements File: $req"
   # create venv
   python -m venv .venv
   # activate venv
