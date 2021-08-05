@@ -16,7 +16,7 @@ import pathlib
 # write your script (this example is taken from the Python-Workshops repo)
 # remember to run flake8 on your script before uploading it
 path = pathlib.Path(__file__).parents[3]
-data_path = r"Examples/example_data/titanic.csv"
+data_path = r"examples/example_data/titanic.csv"
 
 df = pd.read_csv(path / data_path)
 
