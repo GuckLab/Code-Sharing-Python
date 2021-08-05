@@ -25,6 +25,6 @@ for f in $(find -maxdepth 4 -name *.py); do
   # deactivate venv
   deactivate
   # remove the venv
-  rm -r $venvdir
+  rm -r .venv
 
 done
