@@ -22,9 +22,9 @@ Add files via GitHub website
    fork don't effect the original repository so go nuts!
 #. Find the "Add file" button to the left of the green "Code" button.
    Click "Add file" and choose "Upload files".
-#. Your new script/tool should be tested with a venv as described below in
-   bullet point 7 under *Add files via git command line*. In future, we
-   will try to implement some automated testing to replace this step.
+#. Your new script/tool should be tested within a virtual environment.
+   To do this, just open the terminal locally, ``cd`` to the Code-Sharing-Python
+   folder, and run ``source tests/run_all_scripts.sh``.
 #. Drag and drop the script/tool files and the requirements.txt file or
    choose your files manually.
 #. Add a commit title and short description.
@@ -61,18 +61,8 @@ Add files via git command line
    a template.
 
 #. Make sure the script/tool runs by testing it within a venv (virtual environment).
-    - ``cd`` to the folder containing your new script/tool.
-    - Run ``python -m venv .venv``
-    - On windows run ``.venv\Scripts\activate``. On mac run
-      ``source .venv/bin/activate``
-    - Install the script's requirements by running
-      ``pip install -r requirements.txt``
-    - Run your script with ``python script_name.py``
-    - If the script executes as expected, run ``pip freeze``. This will
-      print out all the current packages in your venv. Use the relevant
-      package version numbers as minimal versions for your
-      ``requirements.txt`` file. See the ``./Examples/requirements.txt``
-      file as an example.
+    - To do this, just ``cd`` to the Code-Sharing-Python
+      folder and run ``source tests/run_all_scripts.sh``.
 
 #. ``cd`` back to the source folder (Code-Sharing-Python).
 #. Check the code syntax with flake8.
