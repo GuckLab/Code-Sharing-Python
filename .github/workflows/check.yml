@@ -43,4 +43,4 @@ jobs:
         flake8 .
     - name: Run all Python files
       run: |
-        source ./tests/run_all_scripts.sh
+        source ./.github/bash_scripts/run_all_scripts.sh $RUNNER_TEMP
