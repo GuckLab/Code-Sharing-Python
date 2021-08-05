@@ -4,4 +4,4 @@ flake8
 
 # your packages
 numpy>=1.20.3
-dclab>=0.34.5
+dclab[dcor]>=0.34.5

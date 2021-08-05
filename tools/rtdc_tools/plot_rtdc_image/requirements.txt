@@ -4,4 +4,4 @@ flake8
 
 # your packages
 matplotlib>=3.4.2
-dclab>=0.34.5
+dclab[dcor]>=0.34.5
