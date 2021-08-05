@@ -1,8 +1,5 @@
 #!/bin/bash
 
-tempdir=$1
-
-echo "tempdir: $tempdir"
 
 for f in $(find -maxdepth 4 -name *.py); do
 
@@ -18,7 +15,7 @@ for f in $(find -maxdepth 4 -name *.py); do
   # create venv
   python -m venv .venv
   # activate venv
-  source .venv//activate
+  source .venv/bin/activate
   # for debugging, check if pip is called from venv
   pip -V
   # install req
