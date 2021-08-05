@@ -34,12 +34,6 @@ jobs:
         # prerequisites
         python -m pip install --upgrade pip wheel
         python -m pip install flake8
-        # install dependencies
-        python -m venv .venv
-        source .venv/bin/activate
-        pip -V
-        echo $RUNNER_TEMP
-        echo $RUNNER_TEMP/.venv
     - name: List installed packages
       run: |
         pip freeze
