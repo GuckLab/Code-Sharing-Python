@@ -36,7 +36,7 @@ for f in $(find . -maxdepth 4 -name *.py); do
   # for debugging, check if pip is called from correct venv
   pip -V
   # install req
-  pip install --upgrade pip wheel
+#  pip install --upgrade pip wheel
   pip install -r $req
   pip freeze
   # run python script
