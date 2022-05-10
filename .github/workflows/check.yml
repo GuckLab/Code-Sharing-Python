@@ -42,4 +42,4 @@ jobs:
         flake8 .
     - name: Run all Python files
       run: |
-        source ./tests/bash_scripts/run_all_scripts.sh
+        ./tests/bash_scripts/run_all_scripts.sh
