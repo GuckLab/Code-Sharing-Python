@@ -28,11 +28,16 @@ jobs:
         sudo mkdir /usr/local/gfortran
         sudo ln -s /usr/local/Cellar/gcc@10/*/lib/gcc/10 /usr/local/gfortran/lib
         gfortran --version
-    - name: Lint with flake8
+    - name: Install dependencies
       run: |
+        # prerequisites
         python -m pip install --upgrade pip wheel
         python -m pip install flake8
+    - name: List installed packages
+      run: |
         pip freeze
+    - name: Lint with flake8
+      run: |
         flake8 .
     - name: Run all Python files
       shell: bash
