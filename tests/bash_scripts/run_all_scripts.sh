@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-for f in $(find -maxdepth 4 -name *.py); do
+for f in $(find . -maxdepth 4 -name *.py); do
 
   # create a blank line for clearer debugging
   echo ""
