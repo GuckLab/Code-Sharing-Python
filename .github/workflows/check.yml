@@ -43,12 +43,12 @@ jobs:
     - name: Run all Python files
       shell: bash
       run: |
-        echo runner.os
-        if [ runner.os == "Linux" ]; then
+        echo "$RUNNER_OS"
+        if [ "$RUNNER_OS" == "Linux" ]; then
              source ./tests/bash_scripts/run_all_scripts.sh
-        elif [ runner.os == "macOS" ]; then
+        elif [ "$RUNNER_OS" == "macOS" ]; then
              source ./tests/bash_scripts/run_all_scripts.sh
-        elif [ runner.os == "Windows" ]; then
+        elif [ "$RUNNER_OS" == "Windows" ]; then
              ./tests/bash_scripts/run_all_scripts.sh
         else
              echo "$RUNNER_OS not supported"
