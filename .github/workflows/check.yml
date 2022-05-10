@@ -2,7 +2,6 @@ name: Checks
 
 on:
   push:
-  pull_request:
 
 jobs:
   build:
@@ -10,8 +9,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        python-version: ['3.7', '3.8', '3.9']
-        os: [macos-latest, ubuntu-latest]
+        python-version: ['3.7', '3.8', '3.9', '3.10']
+        os: [macos-latest, ubuntu-latest, windows-latest]
 
     steps:
     - uses: actions/checkout@v2
@@ -41,5 +40,14 @@ jobs:
       run: |
         flake8 .
     - name: Run all Python files
+      shell: bash
       run: |
-        source ./.github/bash_scripts/run_all_scripts.sh
+        if [ "$RUNNER_OS" == "Linux" ]; then
+             source ./tests/bash_scripts/run_all_scripts.sh
+        elif [ "$RUNNER_OS" == "macOS" ]; then
+             source ./tests/bash_scripts/run_all_scripts.sh
+        elif [ "$RUNNER_OS" == "Windows" ]; then
+             ./tests/bash_scripts/run_all_scripts.sh
+        else
+             echo "$RUNNER_OS not supported"
+        fi
