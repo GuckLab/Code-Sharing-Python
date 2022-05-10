@@ -41,5 +41,14 @@ jobs:
       run: |
         flake8 .
     - name: Run all Python files
+      shell: bash
       run: |
-        ./tests/bash_scripts/run_all_scripts.sh
+         if [ runner.os == "Linux" ]; then
+              source ./tests/bash_scripts/run_all_scripts.sh
+         elif [ runner.os == "macOS" ]; then
+              source ./tests/bash_scripts/run_all_scripts.sh
+         elif [ runner.os == "Windows" ]; then
+              ./tests/bash_scripts/run_all_scripts.sh
+         else
+              echo "$RUNNER_OS not supported"
+         fi
